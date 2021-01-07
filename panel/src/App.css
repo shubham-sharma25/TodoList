@@ -1,9 +1,13 @@
 .App {
   text-align: center;
-  margin: 3rem 25rem !important;
+  margin: 3rem 3rem !important;
   border: 1px solid;
-  border-radius: 16px;
-  padding: 18px;
+  /* border-radius: 16px; */
+  /* padding: 18px; */
+  max-width: 400px;
+  text-align: left;
+  border-color: lightgray;
+  background: #F5F5F5;
 }
 
 .App-logo {
@@ -33,4 +37,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+.category{
+background-color: lightgray;
+
 }

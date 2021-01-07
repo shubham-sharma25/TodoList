@@ -8,9 +8,9 @@ function TodoItem({ todo }) {
     const [name, setName] = useState(todo.name);
     return (
         <div>
-            <div className="row mx-2 align-items-center">
-                <div>#{todo.id.length > 1 ? todo.id[2] : todo.id}</div>
-                <div className="col">
+            <div className="row mx-3 align-items-center">
+                {/* <div>#{todo.id.length > 1 ? todo.id[2] : todo.id}</div> */}
+                <div className="col px-0">
                     {editable ?
                         <input
                             type="text"
@@ -19,7 +19,7 @@ function TodoItem({ todo }) {
                             onChange={(e)=>setName(e.target.value)}
                         />
                         :
-                        <h4>{todo.name}</h4>}
+                        <h6 className="text-success border-bottom">{todo.name} (0)</h6>}
                 </div>
                 <button
                     onClick={() => {
@@ -34,15 +34,15 @@ function TodoItem({ todo }) {
                         }
                         setEditable(!editable);
                     }}
-                    className="btn btn-primary col-2 m-1"
+                    className="border-0"
                 >
-                {editable?"Update":"Edit"} 
+                {editable?<p className="m-0">&#9998;</p>:<p className="m-0">&#9998;</p>} 
                 </button>
                 <button
-                    className="btn btn-danger col-2 m-1"
+                    className="border-0"
                     onClick={() => dispatch(deleteTodo(todo.id))}
                 >
-                    Delete
+                    &times;
                 </button>
             </div>
         </div>

@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 function App() {
   return (
-    <div className="App m-5">
+    <div className="App">
+      <h5 className="category px-3 py-1">CATEGORY</h5>
       <TodoList/>
       <TodoInput/>
     </div>
